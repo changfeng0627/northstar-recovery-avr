@@ -1,0 +1,7 @@
+Northstar Recovery for Lenovo XT2611-1 / avr
+Downstream maintainer: changfeng0627
+Device tree derived from qingxin94/avr-recovery.
+Recovery engine: AERA Recovery, with TeamWin / Android Recovery ancestry.
+Original copyright and license notices remain in the source repositories.
+Original Northstar artwork and new tools: MIT, see LICENSE-NORTHSTAR.
+Experimental build: hardware support requires device validation.

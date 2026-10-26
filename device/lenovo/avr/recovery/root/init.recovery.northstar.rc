@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: Apache-2.0
+# Northstar downstream integration. Never writes to userdata or block devices.
+on boot
+    start northstar-modules
+
+on property:sys.northstar.modules.ready=1
+    start northstar-touch
+
+service northstar-modules /system/bin/sh /system/bin/northstar-modules.sh
+    disabled
+    oneshot
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
+service northstar-touch /system/bin/sh /system/bin/northstar-touch.sh
+    disabled
+    oneshot
+    user root
+    group root input system
+    capabilities SYS_NICE
+    seclabel u:r:recovery:s0

@@ -1,0 +1,35 @@
+diff --git a/kernel_module_loader.cpp b/kernel_module_loader.cpp
+index 49002bc..83a007a 100644
+--- a/kernel_module_loader.cpp
++++ b/kernel_module_loader.cpp
+@@ -442,7 +442,8 @@ int KernelModuleLoader::Try_And_Load_Modules(std::string module_dir, bool vendor
+ 	int modules_loaded = 0;
+ 	std::string dest_module_dir = "/tmp" + module_dir;
+ 	TWFunc::Recursive_Mkdir(dest_module_dir);
+-	Copy_Modules_To_Tmpfs(module_dir);
++	if (!Copy_Modules_To_Tmpfs(module_dir))
++		return 0;
+ 	if (!Write_Module_List(dest_module_dir))
+ 		return kernel_modules_requested.size();
+ 	if (!vendor_is_mounted && module_dir == "/vendor/lib/modules") {
+@@ -472,7 +473,11 @@ std::vector<std::string> KernelModuleLoader::Skip_Loaded_Kernel_Modules() {
+ 	for (auto&& module_line : loaded_modules) {
+ 		auto module = TWFunc::Split_String(module_line, " ")[0];
+ 		std::string full_module_name = module + ".ko";
+-		auto found = std::find(kernel_modules.begin(), kernel_modules.end(), full_module_name);
++		auto found = std::find_if(kernel_modules.begin(), kernel_modules.end(),
++			[&](std::string requested) {
++				std::replace(requested.begin(), requested.end(), '-', '_');
++				return requested == full_module_name;
++			});
+ 		if (found != kernel_modules.end()) {
+ 			LOGINFO("found module to dedupe: %s\n", (*found).c_str());
+ 			kernel_modules.erase(found);
+@@ -488,6 +493,7 @@ bool KernelModuleLoader::Write_Module_List(std::string module_dir) {
+ 	d = opendir(module_dir.c_str());
+ 	auto deduped_modules = Skip_Loaded_Kernel_Modules();
+ 	if (deduped_modules.size() == 0) {
++		if (d != nullptr) closedir(d);
+ 		LOGINFO("Requested modules are loaded\n");
+ 		return false;
+ 	}

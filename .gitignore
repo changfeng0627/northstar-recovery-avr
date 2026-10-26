@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+out/
+inputs/
+device/lenovo/avr/modules/
+device/lenovo/avr/prebuilt/
+device/lenovo/avr/dtb/
+device/lenovo/avr/recovery/root/vendor/bin/
+device/lenovo/avr/recovery/root/vendor/lib64/
+device/lenovo/avr/recovery/root/vendor/lib/modules/
+device/lenovo/avr/recovery/root/vendor/etc/thp/
+device/lenovo/avr/recovery/root/vendor/firmware_mnt/

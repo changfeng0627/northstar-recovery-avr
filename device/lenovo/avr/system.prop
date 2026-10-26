@@ -1,0 +1,46 @@
+#
+# system.prop for Lenovo Legion Y70 (avr)
+# Values aligned with AERA myron/canoe proven template + device confirmation
+#
+
+# Platform (SM8845 / canoe)
+ro.board.platform=canoe
+ro.product.board=canoe
+ro.hardware=qcom
+ro.boot.hardware=qcom
+
+# USB — UFS controller confirmed from iomem: 1d84000.ufshc; DWC3 at a600000
+# (no ssusb wrapper on this platform — platform device is a600000.dwc3)
+ro.boot.bootdevice=1d84000.ufshc
+ro.boot.usbcontroller=a600000.dwc3
+ro.boot.usb.dwc3_msm=a600000.dwc3
+sys.usb.configfs=1
+
+# Dynamic partitions / Virtual A/B
+ro.boot.dynamic_partitions=true
+ro.virtual_ab.enabled=true
+ro.virtual_ab.compression.enabled=true
+
+# FBE (v2, wrappedkey)
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.fde_available=false
+ro.crypto.fbe_available=true
+ro.crypto.type=file
+
+# The slot suffix and verified-boot state come from the bootloader.
+# Never replace those with hard-coded defaults.
+
+# UFS
+ro.storage.type=ufs
+
+# QCOM gatekeeper (TZ-only path, no SPU)
+vendor.gatekeeper.disable_spu=true
+vendor.gatekeeper.is_security_level_spu=0
+
+# Fuse passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# Disable properties that may cause issues in recovery
+ro.debuggable=1
+ro.secure=0
+ro.adb.secure=0

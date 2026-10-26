@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>Northstar Recovery</title>
+  <desc>An eight-point north star inside a returning orbit. Original downstream artwork.</desc>
+  <defs><linearGradient id="sky" x2="1" y2="1"><stop stop-color="#53e4db"/><stop offset="1" stop-color="#78a5ff"/></linearGradient></defs>
+  <rect width="512" height="512" rx="112" fill="#0b1527"/>
+  <path d="M369 128a170 170 0 1 0 54 174" fill="none" stroke="url(#sky)" stroke-width="25" stroke-linecap="round"/>
+  <path d="m354 96 64 46-75 26" fill="#53e4db"/>
+  <path d="m256 118 34 104 104 34-104 34-34 104-34-104-104-34 104-34Z" fill="#e9f8ff"/>
+  <path d="m328 184-34 72 34 72-72-34-72 34 34-72-34-72 72 34Z" fill="#53e4db" opacity=".8"/>
+  <path d="m256 173 21 62 62 21-62 21-21 62-21-62-62-21 62-21Z" fill="#0b1527"/>
+  <circle cx="256" cy="256" r="15" fill="#e9f8ff"/>
+</svg>

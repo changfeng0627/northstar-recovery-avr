@@ -1,0 +1,69 @@
+# init.recovery.qcom.rc — Lenovo Legion Y70 (avr)
+# AERA 16 / SM8845 / canoe / Virtual A/B
+# USB/MTP/ADB/fastboot gadget state machine lives in init.recovery.usb.rc.
+# SPDX-License-Identifier: Apache-2.0
+
+import /init.recovery.hlthchrg.rc
+import /init.recovery.usb.rc
+import /init.recovery.wifi.rc
+import /init.recovery.northstar.rc
+
+on early-fs
+    write /proc/sys/walt/sched_lib_name "recovery,magiskboot,Updater,updater,update_engine_sideload"
+    write /proc/sys/walt/sched_lib_mask_force 255
+
+on fs
+    # Stable bootdevice path (UFS controller from device: 1d84000.ufshc)
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+    # Required for firmware sysfs fallback in recovery (WLAN/cnss blobs)
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
+    # QSEECom / TA access
+    chmod 0660 /dev/qseecom
+    chown system drmrpc /dev/qseecom
+    chmod 0664 /dev/ion
+    chown system system /dev/ion
+
+    # Mount persist for QSEE credentials
+    mkdir /mnt/vendor 0775 shell system
+    mkdir /mnt/vendor/persist 0775 shell system
+    wait /dev/block/bootdevice/by-name/persist
+    mount ext4 /dev/block/bootdevice/by-name/persist /persist noatime nosuid nodev barrier=1
+    mount none /persist /mnt/vendor/persist bind
+
+    # Mount point for firmware (modem partition, slot-aware)
+    mkdir /vendor/firmware_mnt 0755 root root
+    mkdir /firmware 0755 root root
+
+    # Gatekeeper config for QTI TEE-based GK (not SPU-based)
+    setprop vendor.gatekeeper.disable_spu true
+    setprop vendor.gatekeeper.is_security_level_spu 0
+
+on boot
+    # Start ADB over USB
+    setprop sys.usb.config adb
+    setprop sys.usb.configfs 1
+
+on property:ro.boot.usbcontroller=*
+    setprop sys.usb.controller ${ro.boot.usbcontroller}
+
+# -----------------------------------------------------------------------------
+# Post-module-load setup
+# The recovery backend sets twrp.modules.loaded=true after loading modules.
+# -----------------------------------------------------------------------------
+on property:twrp.modules.loaded=true
+    # Mount modem firmware (slot-aware)
+    mount ext4 /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /vendor/firmware_mnt ro
+    mount none /vendor/firmware_mnt /firmware bind
+    # Load ADSP for PMIC / battery
+    wait /sys/kernel/boot_adsp/boot
+    write /sys/kernel/boot_adsp/boot 1
+    wait /sys/kernel/boot_adsp/ssr
+    write /sys/kernel/boot_adsp/ssr 1
+    # Wait for battery path
+    wait /sys/class/power_supply/battery
+
+on property:servicemanager.ready=true
+    setprop sys.boot_completed 1

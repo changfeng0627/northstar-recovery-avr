@@ -1,0 +1,1235 @@
+{
+  "kernel": "6.12.58-android16-6-gb0a9599c6c01-ab14987696-4k",
+  "donor_archive_sha256": "936f2d9ee3764c6350979189d94cff5c0ebef3f388bd66eb44b9ad02bc6370a7",
+  "vendor_boot_sha256": "c18bd22aa1b72666afea69acd3da8967afc7ab231e2ab41494bbe28a8214e68c",
+  "modules": [
+    {
+      "name": "debug_symbol.ko",
+      "source": "lib/modules/debug_symbol.ko",
+      "sha256": "6844865c316c8372af398b73b1e861d50fb74d1ad0832b3c8936af41840501c3",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "qcom-scm.ko",
+      "source": "lib/modules/qcom-scm.ko",
+      "sha256": "4a7c86f9b746ecbe72c0f2bf440710def1052a61a6603d64dd838e1d7071f5c0",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "secure_buffer.ko",
+      "source": "lib/modules/secure_buffer.ko",
+      "sha256": "df1a7c4f0ead3545c0025b8cd781b9250e4d06a1d8b13c0eb0120214d4b43918",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom-scm"
+    },
+    {
+      "name": "gh_arm_drv.ko",
+      "source": "lib/modules/gh_arm_drv.ko",
+      "sha256": "c03eedf670f49d2017f8c6bd8961165f04e262a7b55457e6bcd97e5452fa5f97",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "gh_dbl.ko",
+      "source": "lib/modules/gh_dbl.ko",
+      "sha256": "1dbf30c4d0b274eba541ba08114d7a37118392ae6aacb06fef401a19d1594a3e",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "gh_msgq.ko",
+      "source": "lib/modules/gh_msgq.ko",
+      "sha256": "cb72f201b28adaaa9f240b9eb70f6a3feb478676c0edf417c97379ff6cd3a651",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "gh_rm_drv.ko",
+      "source": "lib/modules/gh_rm_drv.ko",
+      "sha256": "55f1a9af9d2a02de52aeeb8c24dec558630c633a26928e9fc2db898317302c66",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "gh_arm_drv,gh_dbl,gh_msgq,qcom-scm,secure_buffer"
+    },
+    {
+      "name": "mem-prot.ko",
+      "source": "lib/modules/mem-prot.ko",
+      "sha256": "03459deefed5ac19e5260cac29610ff6bf10f1622347084c74e48500cc88b418",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom-scm"
+    },
+    {
+      "name": "gh_rm_heap_manager.ko",
+      "source": "lib/modules/gh_rm_heap_manager.ko",
+      "sha256": "0c8c225d08daac02b6eca467ec9a1c8fbeb5e3e9fadd7e2c7159c4643f8b803f",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "gh_rm_drv,mem-prot"
+    },
+    {
+      "name": "gh_mem_notifier.ko",
+      "source": "lib/modules/gh_mem_notifier.ko",
+      "sha256": "b5c99856f3e25d5dc117993dc93b84d0dc7c5d46573b166527f1dce5aab60ad2",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "gh_rm_drv"
+    },
+    {
+      "name": "mem_buf_dev.ko",
+      "source": "lib/modules/mem_buf_dev.ko",
+      "sha256": "8285739d4a2b7c0a5e128fb5b6fd78b70770f2bfa75057c8df21d7e800885718",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "secure_buffer,gh_rm_heap_manager,gh_rm_drv,gh_mem_notifier"
+    },
+    {
+      "name": "msm_dma_iommu_mapping.ko",
+      "source": "lib/modules/msm_dma_iommu_mapping.ko",
+      "sha256": "9a4652c4f434bed5357217e9ddd6aea4c986c8084d0058a02a2c045e6627ff2d",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "deferred-free-helper.ko",
+      "source": "lib/modules/deferred-free-helper.ko",
+      "sha256": "44740d905f0fcdae7464d3b769e4bea5a6fe9a870a925a8ca5010d3de4856d9b",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "qcom_dma_heaps.ko",
+      "source": "lib/modules/qcom_dma_heaps.ko",
+      "sha256": "efcbee6ced95d9e32d518d3141f626b954e679c282ccf7da6c7d733675b097c6",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "mem_buf_dev,msm_dma_iommu_mapping,deferred-free-helper,secure_buffer,qcom-scm"
+    },
+    {
+      "name": "smem.ko",
+      "source": "lib/modules/smem.ko",
+      "sha256": "fc0a81c66e0719c176894026ca6f2ff1d9d8dc4a2c30a7ab392830c1b1cbcb6c",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "minidump.ko",
+      "source": "lib/modules/minidump.ko",
+      "sha256": "573e70f4d693e318ab721d796ea8fdeb90bc13a27a22b117b3059743939691d9",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "debug_symbol,qcom_dma_heaps,smem"
+    },
+    {
+      "name": "mmi_annotate.ko",
+      "source": "vendor_dlkm/lib/modules/mmi_annotate.ko",
+      "sha256": "1416bc74e131ee905b2f8c559e45e7e871f982812ee968904de0a61904dcbaa0",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "minidump"
+    },
+    {
+      "name": "mmi_info.ko",
+      "source": "vendor_dlkm/lib/modules/mmi_info.ko",
+      "sha256": "c0bdf899194ffbeacb8f653f4249dae1a4fb92225bad3e5700e514ead239b069",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "mmi_annotate,smem"
+    },
+    {
+      "name": "mmi_relay.ko",
+      "source": "vendor_dlkm/lib/modules/mmi_relay.ko",
+      "sha256": "67284d9854a8c3c9bbbaf3b17716f32c3cbbb81fe13858f9523ca8859fbe7b2f",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "panel_event_notifier.ko",
+      "source": "vendor_dlkm/lib/modules/panel_event_notifier.ko",
+      "sha256": "48d5b1a69364c81ccb59e8e93e08a92c79abd9f68282f861b38eb6f96f93fde5",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "sensors_class.ko",
+      "source": "vendor_dlkm/lib/modules/sensors_class.ko",
+      "sha256": "acbc8c4e3dcafac9ed14bb44c7ec5b12ecc0936da49fe88ed534b5f1eb2481c4",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "touchscreen_mmi.ko",
+      "source": "vendor_dlkm/lib/modules/touchscreen_mmi.ko",
+      "sha256": "637cfebde67214c06894af4758b09efd9e471ab22c154689bff45d7a98237dd6",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "mmi_relay,panel_event_notifier,sensors_class"
+    },
+    {
+      "name": "goodix_brl_thp.ko",
+      "source": "vendor_dlkm/lib/modules/goodix_brl_thp.ko",
+      "sha256": "bdbe152860973fccd346495f532c1e8b3445099e8681991ccdc8d5adc2d3eed0",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "mmi_info,touchscreen_mmi"
+    },
+    {
+      "name": "qcom_ipc_logging.ko",
+      "source": "lib/modules/qcom_ipc_logging.ko",
+      "sha256": "9048d6a0c4446f68e248726177b9f06e54f1b52928cf9662c32e2cb305eb8823",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "minidump"
+    },
+    {
+      "name": "qcom_glink.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_glink.ko",
+      "sha256": "f6fb89cc227a4f6bd4f7cd400ed96db56026b98109a5577ac79b80685ab34ffd",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging"
+    },
+    {
+      "name": "qcom_glink_smem.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_glink_smem.ko",
+      "sha256": "9a457f41c66fd03110b226b796a424e6c8b46f90786302faef9e4bfdff2c3a4c",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "smem,qcom_glink,qcom_ipc_logging"
+    },
+    {
+      "name": "qcom_smd.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_smd.ko",
+      "sha256": "72cd8b5a641c48d879fd0bf49a95ba577e3f7fc17bd6bd5b2b6f9a0673246bb4",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "smem"
+    },
+    {
+      "name": "rproc_qcom_common.ko",
+      "source": "vendor_dlkm/lib/modules/rproc_qcom_common.ko",
+      "sha256": "723d19f44992f0a6defa5d4f2f033d7e63474991ee4736c1f3e650e231b49f92",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "smem,qcom_glink_smem,qcom_glink,qcom_smd"
+    },
+    {
+      "name": "qmi_helpers.ko",
+      "source": "vendor_dlkm/lib/modules/qmi_helpers.ko",
+      "sha256": "9b9da1926c4ddbf75cffaf04f9b211eb7e5e5c31f11c169cafb86db79671188b",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging"
+    },
+    {
+      "name": "qcom_pdr_msg.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_pdr_msg.ko",
+      "sha256": "c29931989f7d8492e3955c5a480001dd1ffa0a034bb55c78f520cc18cc548ada",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qmi_helpers"
+    },
+    {
+      "name": "pdr_interface.ko",
+      "source": "vendor_dlkm/lib/modules/pdr_interface.ko",
+      "sha256": "e9b0b7c2aba636ae0ba8b2e59ab35ded1b56438231455d48a67aa278c7d6d08c",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_pdr_msg,qmi_helpers,rproc_qcom_common"
+    },
+    {
+      "name": "qti_pmic_glink.ko",
+      "source": "vendor_dlkm/lib/modules/qti_pmic_glink.ko",
+      "sha256": "254fc64f6c3a301890c060536ed0689aae1775091ed27871ade4614c538ad042",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging,rproc_qcom_common,pdr_interface"
+    },
+    {
+      "name": "qti_battery_charger.ko",
+      "source": "vendor_dlkm/lib/modules/qti_battery_charger.ko",
+      "sha256": "ca23bf526b21fe22ae7afb18f2333629b66211fcc102d829567ee4ca128823c1",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qti_pmic_glink,panel_event_notifier"
+    },
+    {
+      "name": "bm_adsp_ulog.ko",
+      "source": "vendor_dlkm/lib/modules/bm_adsp_ulog.ko",
+      "sha256": "ddca1d2083fb5319e8190e2ffc92be8c2c57aefdcce457a6e8438ff7f8e1ad1c",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qti_pmic_glink,qcom_ipc_logging"
+    },
+    {
+      "name": "qti_glink_charger_v2.ko",
+      "source": "vendor_dlkm/lib/modules/qti_glink_charger_v2.ko",
+      "sha256": "46f6d426dbfa353cad06f4e09df4b4d84099b663a53dc027b842d5649ef1f7bf",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging,qti_pmic_glink,bm_adsp_ulog,mmi_info"
+    },
+    {
+      "name": "moto_reboot_reason.ko",
+      "source": "vendor_dlkm/lib/modules/moto_reboot_reason.ko",
+      "sha256": "bc11212be88af73ddcd778dc3aeefaf64ede5c03bd6e00aa91e6f3d226b87054",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "mmi_glink_charger.ko",
+      "source": "vendor_dlkm/lib/modules/mmi_glink_charger.ko",
+      "sha256": "00cf56300840acf836903ae844ed7d2e3565209ba3d93086a30eeaf2d7862981",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging,qti_glink_charger_v2,mmi_info,bm_adsp_ulog,moto_reboot_reason"
+    },
+    {
+      "name": "qpnp_adaptive_charge.ko",
+      "source": "vendor_dlkm/lib/modules/qpnp_adaptive_charge.ko",
+      "sha256": "bd265e346422ee0da0b8c019d4631264955980304cefe2f13649b041d0a49a5d",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "mmi_glink_charger"
+    },
+    {
+      "name": "qcom_aoss.ko",
+      "source": "lib/modules/qcom_aoss.ko",
+      "sha256": "4d4de37d4079d11ea33e896cc4c0ad84042a9b20971fe2db66a495e3d170d15b",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging"
+    },
+    {
+      "name": "qcom_sysmon.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_sysmon.ko",
+      "sha256": "9cd20d151162c297224bf765a90d226ebfcf4bdac892915f4759134dab7ec310",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qmi_helpers,rproc_qcom_common"
+    },
+    {
+      "name": "qcom_q6v5.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_q6v5.ko",
+      "sha256": "db65cfc90df3989020866a4f50c6716f3de74463450f56fe6c5d2d0c50427cee",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_aoss,qcom_sysmon,smem,rproc_qcom_common"
+    },
+    {
+      "name": "qcom_ramdump.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_ramdump.ko",
+      "sha256": "24a2cbdb23f59144034dd29065d7a40b5d875304ac4102961efabcfeb004266e",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "mdt_loader.ko",
+      "source": "lib/modules/mdt_loader.ko",
+      "sha256": "17e7f483f14ab07f81e3606c00a1882603fe8026bedaa7163813e01a19f09ee8",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom-scm"
+    },
+    {
+      "name": "qcom_pil_info.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_pil_info.ko",
+      "sha256": "08490756f75dd154a12b3a5dbef506ed329f0c0746b975b521cf613bc9b8df06",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "qcom_q6v5_pas.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_q6v5_pas.ko",
+      "sha256": "22b4d746a67c3720b4b850c963866afec6e472274e83807563a8e2f5b6d13472",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom-scm,qcom_q6v5,rproc_qcom_common,qcom_sysmon,qcom_ramdump,mdt_loader,qcom_pil_info,smem"
+    },
+    {
+      "name": "q6_pdr_dlkm.ko",
+      "source": "vendor_dlkm/lib/modules/q6_pdr_dlkm.ko",
+      "sha256": "926ab9e503a4764523cc2e5f63e558b66dceab8616ffcfe1bcb9608e43e6cbf5",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "pdr_interface"
+    },
+    {
+      "name": "q6_notifier_dlkm.ko",
+      "source": "vendor_dlkm/lib/modules/q6_notifier_dlkm.ko",
+      "sha256": "edc5e08a31602e82f69e40db9d74faad5d715983c8c98eafb396db84ada3ad2f",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "q6_pdr_dlkm,rproc_qcom_common"
+    },
+    {
+      "name": "snd_event_dlkm.ko",
+      "source": "vendor_dlkm/lib/modules/snd_event_dlkm.ko",
+      "sha256": "fe2e1d3ca3f48f220fb28e09b6bd2d9b183a50338f044b99c73ebb663570d9f6",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "gpr_dlkm.ko",
+      "source": "vendor_dlkm/lib/modules/gpr_dlkm.ko",
+      "sha256": "da99a0a81c43fb80a8e6afad74e58668f4c46904b7e66733e35db7cbe3a99d66",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "q6_notifier_dlkm,snd_event_dlkm"
+    },
+    {
+      "name": "spf_core_dlkm.ko",
+      "source": "vendor_dlkm/lib/modules/spf_core_dlkm.ko",
+      "sha256": "27efc93cfb69bff85a734d72be69c0816c70ce5b07be79bcd77a2e90ef538c51",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "gpr_dlkm"
+    },
+    {
+      "name": "adsp_loader_dlkm.ko",
+      "source": "vendor_dlkm/lib/modules/adsp_loader_dlkm.ko",
+      "sha256": "a2bc081e7cfa96c8874a765775a11958551757b2c6915e9fe63e65aae64fc67f",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "rproc_qcom_common,spf_core_dlkm"
+    },
+    {
+      "name": "redriver.ko",
+      "source": "vendor_dlkm/lib/modules/redriver.ko",
+      "sha256": "e0822aea25cd0ca5d11fe9ce46d1e8952299644ae0e086184942b453598d272f",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "proxy-consumer.ko",
+      "source": "lib/modules/proxy-consumer.ko",
+      "sha256": "eb4c30d012750afc8f3f500ab4b9c28a90dc65ef9465ce37bf4ce6b69a01a582",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "debug-regulator.ko",
+      "source": "lib/modules/debug-regulator.ko",
+      "sha256": "616bfcb16c0cea803fa7b62b28d5b191d59ca6b902d89c5b636a7a472d1cabd5",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "gdsc-regulator.ko",
+      "source": "lib/modules/gdsc-regulator.ko",
+      "sha256": "81c63acb489afe873865575bf77c3e96543adf8c06430dc4f47402dd977ddea6",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "proxy-consumer,debug-regulator"
+    },
+    {
+      "name": "crm-v2.ko",
+      "source": "lib/modules/crm-v2.ko",
+      "sha256": "f76915a68c215246f8e98b4887e47f95b9d9ea6dd3f6bd4c5df9b30ce864a78b",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging"
+    },
+    {
+      "name": "icc-clk.ko",
+      "source": "lib/modules/icc-clk.ko",
+      "sha256": "ec7042f551efa8e5de1c84cd8c2deb63215b5a2df1c69bf335c2b82fa8df860e",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "clk-qcom.ko",
+      "source": "lib/modules/clk-qcom.ko",
+      "sha256": "e44798a0c1149d41e62e1a1981a3103456b83a2bdf3254c1624ba00f7578fabb",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "minidump,gdsc-regulator,crm-v2,icc-clk"
+    },
+    {
+      "name": "repeater.ko",
+      "source": "vendor_dlkm/lib/modules/repeater.ko",
+      "sha256": "e128ab2da4c1b1b8c40aa7f63dea3a03d7c0a75332da92efa8971d51335695d1",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "qti-regmap-debugfs.ko",
+      "source": "lib/modules/qti-regmap-debugfs.ko",
+      "sha256": "724ad0c4fe8cccc147560825381d8543be56b6928ee4fd465f439862429eb4b9",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "wcd_usbss_i2c.ko",
+      "source": "vendor_dlkm/lib/modules/wcd_usbss_i2c.ko",
+      "sha256": "d534ff9405ee7197d398297a849c5f2463f85e1bef71c115d674807974d772bc",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qti-regmap-debugfs"
+    },
+    {
+      "name": "dwc3-msm.ko",
+      "source": "vendor_dlkm/lib/modules/dwc3-msm.ko",
+      "sha256": "fb5ff816b95d035ca809e87fe940fd5bb8d41adbf1d8afc52ff6dc0edcdc8383",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging,redriver,clk-qcom,repeater,wcd_usbss_i2c"
+    },
+    {
+      "name": "usb_f_gsi.ko",
+      "source": "vendor_dlkm/lib/modules/usb_f_gsi.ko",
+      "sha256": "7d990e0f72e34a53752241bb2e2e2b7de8a30a8eb3654ea7472b4df25c2a1eb1",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging,dwc3-msm"
+    },
+    {
+      "name": "rfkill.ko",
+      "source": "system_dlkm/lib/modules/rfkill.ko",
+      "sha256": "19d4a0b70a1b4f145c60ac07f91bc23d545bd2ff159d763cedf27e346ba3e58f",
+      "vermagic": "6.12.58-android16-6-gb0a9599c6c01-ab14987696-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "cfg80211.ko",
+      "source": "vendor_dlkm/lib/modules/cfg80211.ko",
+      "sha256": "6bd961291c61d4b5661e4750844588690c7d847867b291b28ea043b71742faa5",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "rfkill"
+    },
+    {
+      "name": "cnss_prealloc.ko",
+      "source": "vendor_dlkm/lib/modules/cnss_prealloc.ko",
+      "sha256": "3099ea35771855e795127ed851b6ee6be257408ce2229cc779786a731f3397b7",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "qcom_iommu_util.ko",
+      "source": "lib/modules/qcom_iommu_util.ko",
+      "sha256": "3c886e25daad09484947642f5acb932df776c4cbfc65e447e56a9ba3369f6b6e",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom-scm"
+    },
+    {
+      "name": "qcom_va_minidump.ko",
+      "source": "vendor_dlkm/lib/modules/qcom_va_minidump.ko",
+      "sha256": "3c1b1d4513ea2c6499e5e321c91d0d876a089e491e0023c3f6d6f4fc465b0a6e",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "minidump"
+    },
+    {
+      "name": "gsim.ko",
+      "source": "vendor_dlkm/lib/modules/gsim.ko",
+      "sha256": "a174e65d9e3c162618e8b184c9b09a57fc066c92a6c53b22edc213ec37621d8e",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging,qcom_va_minidump"
+    },
+    {
+      "name": "rmnet_mem.ko",
+      "source": "vendor_dlkm/lib/modules/rmnet_mem.ko",
+      "sha256": "cdb40fa5903a24fd94a0030a3b7d0a3cfd585088fdd5021e8a0086d77f52d5c3",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "ipam.ko",
+      "source": "vendor_dlkm/lib/modules/ipam.ko",
+      "sha256": "5ab2eac18c64deacbe837fae148d5a9600b27afe2419cceeb33ce38e86d0cdfe",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging,gsim,qcom-scm,qcom_aoss,qcom_va_minidump,qcom_iommu_util,smem,mdt_loader,qcom_ramdump,rmnet_mem,qmi_helpers,rproc_qcom_common,usb_f_gsi"
+    },
+    {
+      "name": "socinfo.ko",
+      "source": "lib/modules/socinfo.ko",
+      "sha256": "5f5ae33c71af62d9c81986666e3aac9d8e08863bdd8cd38287a048114370709e",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "smem"
+    },
+    {
+      "name": "sched-walt.ko",
+      "source": "lib/modules/sched-walt.ko",
+      "sha256": "7ab5163d9f077238e56f76b26f06982ec30d6bb494655941c1123532f1c1dff8",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "socinfo"
+    },
+    {
+      "name": "cnss_nl.ko",
+      "source": "vendor_dlkm/lib/modules/cnss_nl.ko",
+      "sha256": "9f65ec81db5a01d34cb9fabcd91dc82b1da4e5cbd96cc0353008eca2045c1395",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": ""
+    },
+    {
+      "name": "smem-mailbox.ko",
+      "source": "vendor_dlkm/lib/modules/smem-mailbox.ko",
+      "sha256": "56885e8bb8e63705d400aa05390e32ae320a1d48d7e68fb7dcee01a910da0904",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "smem"
+    },
+    {
+      "name": "cnss_utils.ko",
+      "source": "vendor_dlkm/lib/modules/cnss_utils.ko",
+      "sha256": "8b80c3e03da3644530d3fdedd4bd7132085819a8994383d6a209a5eb24863c2d",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "smem-mailbox"
+    },
+    {
+      "name": "pinctrl-msm.ko",
+      "source": "lib/modules/pinctrl-msm.ko",
+      "sha256": "78f232c6d939e2c41be855867a83b67b759b96b8a2ea19a12fd36d63d897e49a",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom-scm"
+    },
+    {
+      "name": "wlan_firmware_service.ko",
+      "source": "vendor_dlkm/lib/modules/wlan_firmware_service.ko",
+      "sha256": "fbf7f3bf0d34986e5b2588c6b7df314453b5d7cda4e2511cbc41c74bfc2534f2",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qmi_helpers"
+    },
+    {
+      "name": "icnss2.ko",
+      "source": "vendor_dlkm/lib/modules/icnss2.ko",
+      "sha256": "752d5e67a718648b0bd498de0177d1599b6ba12d34cdb709ef3aee09f9cfd374",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "qcom_ipc_logging,socinfo,pdr_interface,cnss_prealloc,rproc_qcom_common,qcom_ramdump,pinctrl-msm,qcom_aoss,wlan_firmware_service,qmi_helpers"
+    },
+    {
+      "name": "qca_cld3_wcn7750.ko",
+      "source": "vendor_dlkm/lib/modules/qca_cld3_wcn7750.ko",
+      "sha256": "40f87bdcb08913dabf5cfade42bf2325f542fa82abafb2668a9e699fb8ed71d6",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "cfg80211,cnss_prealloc,qcom_iommu_util,ipam,sched-walt,qcom_va_minidump,cnss_nl,cnss_utils,icnss2,rproc_qcom_common,qmi_helpers"
+    },
+    {
+      "name": "rmnet_ctl.ko",
+      "source": "vendor_dlkm/lib/modules/rmnet_ctl.ko",
+      "sha256": "9e3843325f88e211c04fec62f40f3baf857c770b769c257a39936ed5dc86c73d",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "ipam,qcom_ipc_logging"
+    },
+    {
+      "name": "rmnet_core.ko",
+      "source": "vendor_dlkm/lib/modules/rmnet_core.ko",
+      "sha256": "565725e6692041bb0042439192efa682d95d496f3d63b192196141e9dce11885",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "ipam,rmnet_mem,rmnet_ctl,qmi_helpers"
+    },
+    {
+      "name": "rmnet_wlan.ko",
+      "source": "vendor_dlkm/lib/modules/rmnet_wlan.ko",
+      "sha256": "491150fe92d9e1ff35e94a55c0d3fb7827caeb82acea579197426d901fa348a6",
+      "vermagic": "6.12.58-android16-6-maybe-dirty-4k SMP preempt mod_unload modversions aarch64",
+      "depends": "rmnet_core"
+    }
+  ],
+  "early_modules": [
+    "debug_symbol.ko",
+    "qcom-scm.ko",
+    "secure_buffer.ko",
+    "gh_arm_drv.ko",
+    "gh_dbl.ko",
+    "gh_msgq.ko",
+    "gh_rm_drv.ko",
+    "mem-prot.ko",
+    "gh_rm_heap_manager.ko",
+    "gh_mem_notifier.ko",
+    "mem_buf_dev.ko",
+    "msm_dma_iommu_mapping.ko",
+    "deferred-free-helper.ko",
+    "qcom_dma_heaps.ko",
+    "smem.ko",
+    "minidump.ko",
+    "mmi_annotate.ko",
+    "mmi_info.ko",
+    "mmi_relay.ko",
+    "panel_event_notifier.ko",
+    "sensors_class.ko",
+    "touchscreen_mmi.ko",
+    "goodix_brl_thp.ko",
+    "qcom_ipc_logging.ko",
+    "qcom_glink.ko",
+    "qcom_glink_smem.ko",
+    "qcom_smd.ko",
+    "rproc_qcom_common.ko",
+    "qmi_helpers.ko",
+    "qcom_pdr_msg.ko",
+    "pdr_interface.ko",
+    "qti_pmic_glink.ko",
+    "qti_battery_charger.ko",
+    "bm_adsp_ulog.ko",
+    "qti_glink_charger_v2.ko",
+    "moto_reboot_reason.ko",
+    "mmi_glink_charger.ko",
+    "qpnp_adaptive_charge.ko",
+    "qcom_aoss.ko",
+    "qcom_sysmon.ko",
+    "qcom_q6v5.ko",
+    "qcom_ramdump.ko",
+    "mdt_loader.ko",
+    "qcom_pil_info.ko",
+    "qcom_q6v5_pas.ko",
+    "q6_pdr_dlkm.ko",
+    "q6_notifier_dlkm.ko",
+    "snd_event_dlkm.ko",
+    "gpr_dlkm.ko",
+    "spf_core_dlkm.ko",
+    "adsp_loader_dlkm.ko",
+    "redriver.ko",
+    "proxy-consumer.ko",
+    "debug-regulator.ko",
+    "gdsc-regulator.ko",
+    "crm-v2.ko",
+    "icc-clk.ko",
+    "clk-qcom.ko",
+    "repeater.ko",
+    "qti-regmap-debugfs.ko",
+    "wcd_usbss_i2c.ko",
+    "dwc3-msm.ko",
+    "usb_f_gsi.ko"
+  ],
+  "wlan_modules": [
+    "rfkill.ko",
+    "cfg80211.ko",
+    "cnss_prealloc.ko",
+    "qcom_iommu_util.ko",
+    "qcom_va_minidump.ko",
+    "gsim.ko",
+    "rmnet_mem.ko",
+    "ipam.ko",
+    "socinfo.ko",
+    "sched-walt.ko",
+    "cnss_nl.ko",
+    "smem-mailbox.ko",
+    "cnss_utils.ko",
+    "pinctrl-msm.ko",
+    "wlan_firmware_service.ko",
+    "icnss2.ko",
+    "qca_cld3_wcn7750.ko",
+    "rmnet_ctl.ko",
+    "rmnet_core.ko",
+    "rmnet_wlan.ko"
+  ],
+  "goodix": [
+    {
+      "path": "vendor/bin/odm_tsc",
+      "original_sha256": "f0a5576eb185dcc110959158571e2c803042d4e36ffee9368ee28958b8427a63",
+      "sha256": "e9a9e54bb575347e0c362ddf42e5c9412fea15854bf789225254d88b995ec9e5",
+      "redirected_to_tmp": true
+    },
+    {
+      "path": "vendor/lib64/libgdix_afe.so",
+      "original_sha256": "b5d3b6c82bdd2ea157805fa245c15f0cfe953e7c3f9f863f82dc9544e3a48cfc",
+      "sha256": "b5d3b6c82bdd2ea157805fa245c15f0cfe953e7c3f9f863f82dc9544e3a48cfc",
+      "redirected_to_tmp": false
+    },
+    {
+      "path": "vendor/lib64/libgdix_tsc.so",
+      "original_sha256": "398ddd96ec8b1146aa0e6ad715c3fe580c60d535122669951250b947e89c72ef",
+      "sha256": "f25f8ebd3383139d2ee727579c9fa3048100ef76cd7418c901cfea50cab72ce7",
+      "redirected_to_tmp": true
+    },
+    {
+      "path": "vendor/lib64/libgdix_tsa_avr.so",
+      "original_sha256": "39d616fa993adae6cc61497f1c1578ba237c2fb3bad5b8ce49ba91592220ba26",
+      "sha256": "cf0d1f0747ed6efd6a125295a8486cf47fcc36e7c33a8ac9b34a6af0488e26b5",
+      "redirected_to_tmp": true
+    },
+    {
+      "path": "vendor/lib64/libgdix_tsd.so",
+      "original_sha256": "4dae9e023b881d909d2e5e30dfca0f6493fd7c17af2bb509cb31b74b9616cfb3",
+      "sha256": "4dae9e023b881d909d2e5e30dfca0f6493fd7c17af2bb509cb31b74b9616cfb3",
+      "redirected_to_tmp": false
+    },
+    {
+      "path": "vendor/lib64/libbase.so",
+      "original_sha256": "bb4f192ad7c8585b2715327f4fbb50cedcad242e6a8eaca8576a917670e10934",
+      "sha256": "bb4f192ad7c8585b2715327f4fbb50cedcad242e6a8eaca8576a917670e10934",
+      "redirected_to_tmp": false
+    },
+    {
+      "path": "vendor/lib64/libcutils.so",
+      "original_sha256": "a7304a6f30730cc263ad0390053da1a5fc53816235f00b16a3e84a1f897e1707",
+      "sha256": "a7304a6f30730cc263ad0390053da1a5fc53816235f00b16a3e84a1f897e1707",
+      "redirected_to_tmp": false
+    },
+    {
+      "path": "vendor/etc/thp/goodix_config.cfg",
+      "original_sha256": "29dd57902e4edb46bfd0b1aa5cb8a21a66ff82c5b256c3cb3c8563fea3357c05",
+      "sha256": "29dd57902e4edb46bfd0b1aa5cb8a21a66ff82c5b256c3cb3c8563fea3357c05",
+      "redirected_to_tmp": false
+    },
+    {
+      "path": "vendor/etc/thp/goodix_firmware.bin",
+      "original_sha256": "ac514c5235b87d0776bad5a19f2d2d8c875d0ffdfa9a8ca96b206cc5ef55bf6a",
+      "sha256": "ac514c5235b87d0776bad5a19f2d2d8c875d0ffdfa9a8ca96b206cc5ef55bf6a",
+      "redirected_to_tmp": false
+    },
+    {
+      "path": "vendor/etc/thp/odm_tsc_cfg.ini",
+      "original_sha256": "13ea6b0450b9c3aa2a209bcbea467eae5e46e3c8fe0e8503120e31bae93e06da",
+      "sha256": "13ea6b0450b9c3aa2a209bcbea467eae5e46e3c8fe0e8503120e31bae93e06da",
+      "redirected_to_tmp": false
+    },
+    {
+      "path": "vendor/etc/thp/thp_cfg_9916.bin",
+      "original_sha256": "a9da6537659029184353075b4e8e95a7f859153a6513c76b7f146c56bb6f945f",
+      "sha256": "a9da6537659029184353075b4e8e95a7f859153a6513c76b7f146c56bb6f945f",
+      "redirected_to_tmp": false
+    }
+  ],
+  "entries": [
+    {
+      "path": "vendor/lib/modules/1.1/debug_symbol.ko",
+      "mode": 33188,
+      "sha256": "6844865c316c8372af398b73b1e861d50fb74d1ad0832b3c8936af41840501c3"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom-scm.ko",
+      "mode": 33188,
+      "sha256": "4a7c86f9b746ecbe72c0f2bf440710def1052a61a6603d64dd838e1d7071f5c0"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/secure_buffer.ko",
+      "mode": 33188,
+      "sha256": "df1a7c4f0ead3545c0025b8cd781b9250e4d06a1d8b13c0eb0120214d4b43918"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gh_arm_drv.ko",
+      "mode": 33188,
+      "sha256": "c03eedf670f49d2017f8c6bd8961165f04e262a7b55457e6bcd97e5452fa5f97"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gh_dbl.ko",
+      "mode": 33188,
+      "sha256": "1dbf30c4d0b274eba541ba08114d7a37118392ae6aacb06fef401a19d1594a3e"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gh_msgq.ko",
+      "mode": 33188,
+      "sha256": "cb72f201b28adaaa9f240b9eb70f6a3feb478676c0edf417c97379ff6cd3a651"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gh_rm_drv.ko",
+      "mode": 33188,
+      "sha256": "55f1a9af9d2a02de52aeeb8c24dec558630c633a26928e9fc2db898317302c66"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/mem-prot.ko",
+      "mode": 33188,
+      "sha256": "03459deefed5ac19e5260cac29610ff6bf10f1622347084c74e48500cc88b418"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gh_rm_heap_manager.ko",
+      "mode": 33188,
+      "sha256": "0c8c225d08daac02b6eca467ec9a1c8fbeb5e3e9fadd7e2c7159c4643f8b803f"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gh_mem_notifier.ko",
+      "mode": 33188,
+      "sha256": "b5c99856f3e25d5dc117993dc93b84d0dc7c5d46573b166527f1dce5aab60ad2"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/mem_buf_dev.ko",
+      "mode": 33188,
+      "sha256": "8285739d4a2b7c0a5e128fb5b6fd78b70770f2bfa75057c8df21d7e800885718"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/msm_dma_iommu_mapping.ko",
+      "mode": 33188,
+      "sha256": "9a4652c4f434bed5357217e9ddd6aea4c986c8084d0058a02a2c045e6627ff2d"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/deferred-free-helper.ko",
+      "mode": 33188,
+      "sha256": "44740d905f0fcdae7464d3b769e4bea5a6fe9a870a925a8ca5010d3de4856d9b"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_dma_heaps.ko",
+      "mode": 33188,
+      "sha256": "efcbee6ced95d9e32d518d3141f626b954e679c282ccf7da6c7d733675b097c6"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/smem.ko",
+      "mode": 33188,
+      "sha256": "fc0a81c66e0719c176894026ca6f2ff1d9d8dc4a2c30a7ab392830c1b1cbcb6c"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/minidump.ko",
+      "mode": 33188,
+      "sha256": "573e70f4d693e318ab721d796ea8fdeb90bc13a27a22b117b3059743939691d9"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/mmi_annotate.ko",
+      "mode": 33188,
+      "sha256": "1416bc74e131ee905b2f8c559e45e7e871f982812ee968904de0a61904dcbaa0"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/mmi_info.ko",
+      "mode": 33188,
+      "sha256": "c0bdf899194ffbeacb8f653f4249dae1a4fb92225bad3e5700e514ead239b069"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/mmi_relay.ko",
+      "mode": 33188,
+      "sha256": "67284d9854a8c3c9bbbaf3b17716f32c3cbbb81fe13858f9523ca8859fbe7b2f"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/panel_event_notifier.ko",
+      "mode": 33188,
+      "sha256": "48d5b1a69364c81ccb59e8e93e08a92c79abd9f68282f861b38eb6f96f93fde5"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/sensors_class.ko",
+      "mode": 33188,
+      "sha256": "acbc8c4e3dcafac9ed14bb44c7ec5b12ecc0936da49fe88ed534b5f1eb2481c4"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/touchscreen_mmi.ko",
+      "mode": 33188,
+      "sha256": "637cfebde67214c06894af4758b09efd9e471ab22c154689bff45d7a98237dd6"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/goodix_brl_thp.ko",
+      "mode": 33188,
+      "sha256": "bdbe152860973fccd346495f532c1e8b3445099e8681991ccdc8d5adc2d3eed0"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_ipc_logging.ko",
+      "mode": 33188,
+      "sha256": "9048d6a0c4446f68e248726177b9f06e54f1b52928cf9662c32e2cb305eb8823"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_glink.ko",
+      "mode": 33188,
+      "sha256": "f6fb89cc227a4f6bd4f7cd400ed96db56026b98109a5577ac79b80685ab34ffd"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_glink_smem.ko",
+      "mode": 33188,
+      "sha256": "9a457f41c66fd03110b226b796a424e6c8b46f90786302faef9e4bfdff2c3a4c"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_smd.ko",
+      "mode": 33188,
+      "sha256": "72cd8b5a641c48d879fd0bf49a95ba577e3f7fc17bd6bd5b2b6f9a0673246bb4"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/rproc_qcom_common.ko",
+      "mode": 33188,
+      "sha256": "723d19f44992f0a6defa5d4f2f033d7e63474991ee4736c1f3e650e231b49f92"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qmi_helpers.ko",
+      "mode": 33188,
+      "sha256": "9b9da1926c4ddbf75cffaf04f9b211eb7e5e5c31f11c169cafb86db79671188b"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_pdr_msg.ko",
+      "mode": 33188,
+      "sha256": "c29931989f7d8492e3955c5a480001dd1ffa0a034bb55c78f520cc18cc548ada"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/pdr_interface.ko",
+      "mode": 33188,
+      "sha256": "e9b0b7c2aba636ae0ba8b2e59ab35ded1b56438231455d48a67aa278c7d6d08c"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qti_pmic_glink.ko",
+      "mode": 33188,
+      "sha256": "254fc64f6c3a301890c060536ed0689aae1775091ed27871ade4614c538ad042"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qti_battery_charger.ko",
+      "mode": 33188,
+      "sha256": "ca23bf526b21fe22ae7afb18f2333629b66211fcc102d829567ee4ca128823c1"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/bm_adsp_ulog.ko",
+      "mode": 33188,
+      "sha256": "ddca1d2083fb5319e8190e2ffc92be8c2c57aefdcce457a6e8438ff7f8e1ad1c"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qti_glink_charger_v2.ko",
+      "mode": 33188,
+      "sha256": "46f6d426dbfa353cad06f4e09df4b4d84099b663a53dc027b842d5649ef1f7bf"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/moto_reboot_reason.ko",
+      "mode": 33188,
+      "sha256": "bc11212be88af73ddcd778dc3aeefaf64ede5c03bd6e00aa91e6f3d226b87054"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/mmi_glink_charger.ko",
+      "mode": 33188,
+      "sha256": "00cf56300840acf836903ae844ed7d2e3565209ba3d93086a30eeaf2d7862981"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qpnp_adaptive_charge.ko",
+      "mode": 33188,
+      "sha256": "bd265e346422ee0da0b8c019d4631264955980304cefe2f13649b041d0a49a5d"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_aoss.ko",
+      "mode": 33188,
+      "sha256": "4d4de37d4079d11ea33e896cc4c0ad84042a9b20971fe2db66a495e3d170d15b"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_sysmon.ko",
+      "mode": 33188,
+      "sha256": "9cd20d151162c297224bf765a90d226ebfcf4bdac892915f4759134dab7ec310"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_q6v5.ko",
+      "mode": 33188,
+      "sha256": "db65cfc90df3989020866a4f50c6716f3de74463450f56fe6c5d2d0c50427cee"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_ramdump.ko",
+      "mode": 33188,
+      "sha256": "24a2cbdb23f59144034dd29065d7a40b5d875304ac4102961efabcfeb004266e"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/mdt_loader.ko",
+      "mode": 33188,
+      "sha256": "17e7f483f14ab07f81e3606c00a1882603fe8026bedaa7163813e01a19f09ee8"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_pil_info.ko",
+      "mode": 33188,
+      "sha256": "08490756f75dd154a12b3a5dbef506ed329f0c0746b975b521cf613bc9b8df06"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_q6v5_pas.ko",
+      "mode": 33188,
+      "sha256": "22b4d746a67c3720b4b850c963866afec6e472274e83807563a8e2f5b6d13472"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/q6_pdr_dlkm.ko",
+      "mode": 33188,
+      "sha256": "926ab9e503a4764523cc2e5f63e558b66dceab8616ffcfe1bcb9608e43e6cbf5"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/q6_notifier_dlkm.ko",
+      "mode": 33188,
+      "sha256": "edc5e08a31602e82f69e40db9d74faad5d715983c8c98eafb396db84ada3ad2f"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/snd_event_dlkm.ko",
+      "mode": 33188,
+      "sha256": "fe2e1d3ca3f48f220fb28e09b6bd2d9b183a50338f044b99c73ebb663570d9f6"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gpr_dlkm.ko",
+      "mode": 33188,
+      "sha256": "da99a0a81c43fb80a8e6afad74e58668f4c46904b7e66733e35db7cbe3a99d66"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/spf_core_dlkm.ko",
+      "mode": 33188,
+      "sha256": "27efc93cfb69bff85a734d72be69c0816c70ce5b07be79bcd77a2e90ef538c51"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/adsp_loader_dlkm.ko",
+      "mode": 33188,
+      "sha256": "a2bc081e7cfa96c8874a765775a11958551757b2c6915e9fe63e65aae64fc67f"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/redriver.ko",
+      "mode": 33188,
+      "sha256": "e0822aea25cd0ca5d11fe9ce46d1e8952299644ae0e086184942b453598d272f"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/proxy-consumer.ko",
+      "mode": 33188,
+      "sha256": "eb4c30d012750afc8f3f500ab4b9c28a90dc65ef9465ce37bf4ce6b69a01a582"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/debug-regulator.ko",
+      "mode": 33188,
+      "sha256": "616bfcb16c0cea803fa7b62b28d5b191d59ca6b902d89c5b636a7a472d1cabd5"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gdsc-regulator.ko",
+      "mode": 33188,
+      "sha256": "81c63acb489afe873865575bf77c3e96543adf8c06430dc4f47402dd977ddea6"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/crm-v2.ko",
+      "mode": 33188,
+      "sha256": "f76915a68c215246f8e98b4887e47f95b9d9ea6dd3f6bd4c5df9b30ce864a78b"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/icc-clk.ko",
+      "mode": 33188,
+      "sha256": "ec7042f551efa8e5de1c84cd8c2deb63215b5a2df1c69bf335c2b82fa8df860e"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/clk-qcom.ko",
+      "mode": 33188,
+      "sha256": "e44798a0c1149d41e62e1a1981a3103456b83a2bdf3254c1624ba00f7578fabb"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/repeater.ko",
+      "mode": 33188,
+      "sha256": "e128ab2da4c1b1b8c40aa7f63dea3a03d7c0a75332da92efa8971d51335695d1"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qti-regmap-debugfs.ko",
+      "mode": 33188,
+      "sha256": "724ad0c4fe8cccc147560825381d8543be56b6928ee4fd465f439862429eb4b9"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/wcd_usbss_i2c.ko",
+      "mode": 33188,
+      "sha256": "d534ff9405ee7197d398297a849c5f2463f85e1bef71c115d674807974d772bc"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/dwc3-msm.ko",
+      "mode": 33188,
+      "sha256": "fb5ff816b95d035ca809e87fe940fd5bb8d41adbf1d8afc52ff6dc0edcdc8383"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/usb_f_gsi.ko",
+      "mode": 33188,
+      "sha256": "7d990e0f72e34a53752241bb2e2e2b7de8a30a8eb3654ea7472b4df25c2a1eb1"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/rfkill.ko",
+      "mode": 33188,
+      "sha256": "19d4a0b70a1b4f145c60ac07f91bc23d545bd2ff159d763cedf27e346ba3e58f"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/cfg80211.ko",
+      "mode": 33188,
+      "sha256": "6bd961291c61d4b5661e4750844588690c7d847867b291b28ea043b71742faa5"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/cnss_prealloc.ko",
+      "mode": 33188,
+      "sha256": "3099ea35771855e795127ed851b6ee6be257408ce2229cc779786a731f3397b7"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_iommu_util.ko",
+      "mode": 33188,
+      "sha256": "3c886e25daad09484947642f5acb932df776c4cbfc65e447e56a9ba3369f6b6e"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qcom_va_minidump.ko",
+      "mode": 33188,
+      "sha256": "3c1b1d4513ea2c6499e5e321c91d0d876a089e491e0023c3f6d6f4fc465b0a6e"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/gsim.ko",
+      "mode": 33188,
+      "sha256": "a174e65d9e3c162618e8b184c9b09a57fc066c92a6c53b22edc213ec37621d8e"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/rmnet_mem.ko",
+      "mode": 33188,
+      "sha256": "cdb40fa5903a24fd94a0030a3b7d0a3cfd585088fdd5021e8a0086d77f52d5c3"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/ipam.ko",
+      "mode": 33188,
+      "sha256": "5ab2eac18c64deacbe837fae148d5a9600b27afe2419cceeb33ce38e86d0cdfe"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/socinfo.ko",
+      "mode": 33188,
+      "sha256": "5f5ae33c71af62d9c81986666e3aac9d8e08863bdd8cd38287a048114370709e"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/sched-walt.ko",
+      "mode": 33188,
+      "sha256": "7ab5163d9f077238e56f76b26f06982ec30d6bb494655941c1123532f1c1dff8"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/cnss_nl.ko",
+      "mode": 33188,
+      "sha256": "9f65ec81db5a01d34cb9fabcd91dc82b1da4e5cbd96cc0353008eca2045c1395"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/smem-mailbox.ko",
+      "mode": 33188,
+      "sha256": "56885e8bb8e63705d400aa05390e32ae320a1d48d7e68fb7dcee01a910da0904"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/cnss_utils.ko",
+      "mode": 33188,
+      "sha256": "8b80c3e03da3644530d3fdedd4bd7132085819a8994383d6a209a5eb24863c2d"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/pinctrl-msm.ko",
+      "mode": 33188,
+      "sha256": "78f232c6d939e2c41be855867a83b67b759b96b8a2ea19a12fd36d63d897e49a"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/wlan_firmware_service.ko",
+      "mode": 33188,
+      "sha256": "fbf7f3bf0d34986e5b2588c6b7df314453b5d7cda4e2511cbc41c74bfc2534f2"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/icnss2.ko",
+      "mode": 33188,
+      "sha256": "752d5e67a718648b0bd498de0177d1599b6ba12d34cdb709ef3aee09f9cfd374"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/qca_cld3_wcn7750.ko",
+      "mode": 33188,
+      "sha256": "40f87bdcb08913dabf5cfade42bf2325f542fa82abafb2668a9e699fb8ed71d6"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/rmnet_ctl.ko",
+      "mode": 33188,
+      "sha256": "9e3843325f88e211c04fec62f40f3baf857c770b769c257a39936ed5dc86c73d"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/rmnet_core.ko",
+      "mode": 33188,
+      "sha256": "565725e6692041bb0042439192efa682d95d496f3d63b192196141e9dce11885"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/rmnet_wlan.ko",
+      "mode": 33188,
+      "sha256": "491150fe92d9e1ff35e94a55c0d3fb7827caeb82acea579197426d901fa348a6"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/modules.load.early",
+      "mode": 33188,
+      "sha256": "c9422e0e373e3b1a578ebbd4a5d854f6e6f2cc591916a1937cc1cc037438cb99"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/modules.load.wlan",
+      "mode": 33188,
+      "sha256": "893af93ed27c94260a3e713c5f56f17bfb4ce346e1e96a10054cc577fad743fa"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/modules.load",
+      "mode": 33188,
+      "sha256": "1649b7d1aca614781bbc09685a1cef323bac3b7f0f7f3abf99bebaf6780e327c"
+    },
+    {
+      "path": "vendor/lib/modules/1.1/modules.dep",
+      "mode": 33188,
+      "sha256": "b6b7b84f3240d6e28270aeaaa08cd3dfb0fcb1073a5be40922e75db5f2c0db95"
+    },
+    {
+      "path": "vendor/bin/odm_tsc",
+      "mode": 33261,
+      "sha256": "e9a9e54bb575347e0c362ddf42e5c9412fea15854bf789225254d88b995ec9e5"
+    },
+    {
+      "path": "vendor/lib64/libgdix_afe.so",
+      "mode": 33188,
+      "sha256": "b5d3b6c82bdd2ea157805fa245c15f0cfe953e7c3f9f863f82dc9544e3a48cfc"
+    },
+    {
+      "path": "vendor/lib64/libgdix_tsc.so",
+      "mode": 33188,
+      "sha256": "f25f8ebd3383139d2ee727579c9fa3048100ef76cd7418c901cfea50cab72ce7"
+    },
+    {
+      "path": "vendor/lib64/libgdix_tsa_avr.so",
+      "mode": 33188,
+      "sha256": "cf0d1f0747ed6efd6a125295a8486cf47fcc36e7c33a8ac9b34a6af0488e26b5"
+    },
+    {
+      "path": "vendor/lib64/libgdix_tsd.so",
+      "mode": 33188,
+      "sha256": "4dae9e023b881d909d2e5e30dfca0f6493fd7c17af2bb509cb31b74b9616cfb3"
+    },
+    {
+      "path": "vendor/lib64/libbase.so",
+      "mode": 33188,
+      "sha256": "bb4f192ad7c8585b2715327f4fbb50cedcad242e6a8eaca8576a917670e10934"
+    },
+    {
+      "path": "vendor/lib64/libcutils.so",
+      "mode": 33188,
+      "sha256": "a7304a6f30730cc263ad0390053da1a5fc53816235f00b16a3e84a1f897e1707"
+    },
+    {
+      "path": "vendor/etc/thp/goodix_config.cfg",
+      "mode": 33188,
+      "sha256": "29dd57902e4edb46bfd0b1aa5cb8a21a66ff82c5b256c3cb3c8563fea3357c05"
+    },
+    {
+      "path": "vendor/etc/thp/goodix_firmware.bin",
+      "mode": 33188,
+      "sha256": "ac514c5235b87d0776bad5a19f2d2d8c875d0ffdfa9a8ca96b206cc5ef55bf6a"
+    },
+    {
+      "path": "vendor/etc/thp/odm_tsc_cfg.ini",
+      "mode": 33188,
+      "sha256": "13ea6b0450b9c3aa2a209bcbea467eae5e46e3c8fe0e8503120e31bae93e06da"
+    },
+    {
+      "path": "vendor/etc/thp/thp_cfg_9916.bin",
+      "mode": 33188,
+      "sha256": "a9da6537659029184353075b4e8e95a7f859153a6513c76b7f146c56bb6f945f"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.img binary
+*.png binary
+*.gz binary
+*.ko binary
+*.patch whitespace=-space-before-tab

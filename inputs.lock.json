@@ -1,0 +1,25 @@
+{
+  "device": "avr",
+  "model": "XT2611-1",
+  "kernel": "6.12.58-android16-6-gb0a9599c6c01-ab14987696-4k",
+  "security_patch": "2026-09-05",
+  "downloads": [
+    {
+      "file": "avr-prebuilt.tar.gz",
+      "url": "https://github.com/qingxin94/avr-recovery/releases/download/prebuilt-20261025/avr-prebuilt.tar.gz",
+      "sha256": "829ed7b037b5e4f974d9d07b26ed6573733093ab0bd985e8add2e921814bb56f",
+      "extract_to": "upstream-prebuilt"
+    },
+    {
+      "file": "northstar-avr-device-bundle.tar.gz",
+      "url": "https://github.com/changfeng0627/northstar-recovery-avr/releases/download/v0.1.0-beta.1/northstar-avr-device-bundle.tar.gz",
+      "sha256": "36f2988cd8fa423f3c5e510e8bf9b54ebb3e78244e7666076e336759ee1df21a",
+      "extract_to": "device-bundle"
+    }
+  ],
+  "source": {
+    "manifest": "aabd43b2478f3e6dcd0330e7cd5839746c0bf9a7",
+    "recovery": "5508665b35f8598262fe6eb63e04c27dd04e971c",
+    "build_make": "ee2c190b1387f8db94c958ce0aea81773294688c"
+  }
+}
