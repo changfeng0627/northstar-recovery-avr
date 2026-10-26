@@ -28,8 +28,11 @@ git -C bootable/recovery apply --check "$source_root/patches/0001-module-loader.
 git -C bootable/recovery apply "$source_root/patches/0001-module-loader.patch"
 python3 "$source_root/tools/branding.py" --source bootable/recovery --output "$source_root/out/branding"
 python3 "$source_root/tools/validate.py" --tree device/lenovo/avr
+# AOSP envsetup/lunch deliberately probe variables that may be unset.
+set +u
 source build/envsetup.sh
 lunch twrp_avr-bp2a-eng
+set -u
 export GOMAXPROCS=2 GOMEMLIMIT=12GiB GOGC=50
 export ANDROID_JAVA_OPTS='-Xmx4g -Xms1g'
 mka adbd recoveryimage -j2
