@@ -51,6 +51,14 @@ def apply(source,out):
         records.append({'asset':name,'bytes':len(new)})
     # Change UI labels only. Keep APIs, namespaces, storage paths and copyright notices.
     edits={'aeraui/core/engine.cpp':{'identity.title = "AERA Recovery"':'identity.title = "Northstar Recovery"'},'aeraui/scenes/about_scene.cpp':{'FixedLabel(hero, "AERA"':'FixedLabel(hero, "NORTHSTAR"','landscape ? 330 : 310':'landscape ? 160 : 150','"About AERA"':'"About Northstar"','"Independent. Open. Built for recovery."':'"Based on AERA Recovery; avr tree by qingxin94."','"THE PEOPLE BEHIND AERA"':'"UPSTREAM AERA CONTRIBUTORS"'}}
+    # A 1440x3168 phone needs comfortable touch targets and fewer home cards.
+    edits['aeraui/platform/aera_backend.cpp']={
+        'return stored.empty() ? InterfaceSize::kNormal':'return stored.empty() ? InterfaceSize::kLarge',
+        'preferences.interface_size = 1;':'preferences.interface_size = 2;',
+        'if (stored.empty()) return 3;':'if (stored.empty()) return 2;',
+        'return columns >= 2 && columns <= 5 ? columns : 3;':'return columns >= 2 && columns <= 5 ? columns : 2;',
+        'preferences.home_grid_columns = 3;':'preferences.home_grid_columns = 2;',
+    }
     for name,replacements in edits.items():
         p=source/name;text=p.read_text(encoding='utf-8')
         for old,new in replacements.items():

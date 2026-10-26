@@ -16,5 +16,9 @@ while [ ! -e /dev/thp ] || [ ! -e /dev/input_agent ]; do
 done
 # Use the real avr sysfs path. Do not wait for the nonexistent touch_dev node.
 cat /sys/devices/platform/goodix_thp.0/screen_state 2>/dev/null
+if [ ! -e /vendor/lib64/libgdix_tsa.so ]; then
+    ln -s libgdix_tsa_avr.so /vendor/lib64/libgdix_tsa.so || exit 1
+fi
 setprop sys.northstar.touch.started 1
-exec /system/bin/linker64 --library-path /vendor/lib64:/system/lib64 /vendor/bin/odm_tsc
+export LD_LIBRARY_PATH=/vendor/lib64:/system/lib64
+exec /vendor/bin/odm_tsc
