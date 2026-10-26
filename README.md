@@ -14,6 +14,8 @@
 - [已处理缺陷与剩余问题](docs/BUGS.md)
 - [实机验收、回退和品牌说明](docs/TESTING.md)
 
+GitHub 的镜像附件采用 8 MiB 小分卷，以避免大文件上传中断。下载 Release 中的 `download_candidate.py` 后运行 `python download_candidate.py`，脚本会逐卷下载、验证哈希、重组并解压完整 `.img`。分卷文件不能单独刷入；本地桌面交付目录另有完整镜像。
+
 | 项目 | 当前状态 |
 | --- | --- |
 | 设备基线 | XT2611-1 / avr，Android 16，安全补丁 2026-09-05 |
